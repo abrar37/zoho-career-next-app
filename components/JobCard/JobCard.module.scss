@@ -1,0 +1,53 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.cardJob {
+  border: 1px solid #d7dbe3;
+  padding: 32px;
+  max-height: 150px;
+  min-height: 150px;
+  height: 100%;
+  border-radius: 4px;
+  &:hover {
+    background-color: #2569e6;
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+    svg  {
+      transform: translateX(10px);
+      transition: all ease-in-out 0.3s;
+      path{
+        fill: #fff !important;
+      }
+     
+    }
+    .Cardtile {
+      span {
+        color: #fff;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+    .Cardloc{
+      color: #fff;
+    }
+  }
+
+  .HeadIcon {
+    .CardHead {
+      @include font-bold();
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 12px;
+      max-width: 260px;
+      width: 100%;
+    }
+  }
+
+  .Cardloc {
+    @include font-regular();
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 26px;
+    color: #6C6C6C;
+  }
+}

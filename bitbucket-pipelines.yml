@@ -1,0 +1,12 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy on EC2
+          script:
+            - pipe: atlassian/ssh-run:0.2.8
+              variables:
+                SSH_USER: ${user}
+                MODE: 'command'
+                SERVER: ${public_ip}
+                COMMAND: 'cd /tkxel-marketing/tkxel-marketing && git pull && npm i && npm run build && pm2 restart frontend'

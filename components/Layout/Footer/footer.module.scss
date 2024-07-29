@@ -1,0 +1,81 @@
+@import "../../../assets/css/mixins";
+@import "../../../assets/css/spacing";
+@import "../../../assets/css/variables";
+.FooterWrapper {
+  background: $light-black;
+  .CareerFt {
+    padding-top: 60px;
+    padding-bottom: 32px;
+    .SocialFoot{
+      @include small-mobiles() {
+        justify-content: space-between;
+       
+      }
+    li + li {
+     margin-left: 36px;
+    }
+   }
+    ul.FootNav{
+      padding-top: 0;
+      li + li {
+        margin-left:48px;
+        @include small-mobiles() {
+          margin-left:18px;
+         
+        }
+      }
+      @include small-mobiles() {
+        // flex-direction: column;
+        // align-items: flex-start !important;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 40px;
+      }
+      li{
+        a{
+          color: #fff;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+   
+  }
+  .FooterContent {
+    border-bottom: 1px solid rgba(215, 219, 227, 0.2);
+    padding-bottom: 60px;
+    @include small-mobiles() {
+      flex-direction: column;
+      align-items: flex-start !important;
+      padding-bottom: 30px;
+      padding-top: 0;
+      ul {
+        padding-left: 0 !important;
+        margin-top: 20px;
+      }
+    }
+  }
+  .FtContent {
+    :global {
+      .head-ft {
+        @include nav-bold();
+      }
+      a {
+        @include nav-light();
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      .bluepara {
+        color: $blue;
+      }
+      p {
+        @include nav-light();
+      }
+    }
+  }
+}

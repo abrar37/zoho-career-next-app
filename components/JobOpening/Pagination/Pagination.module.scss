@@ -1,0 +1,19 @@
+@import "../../../assets/css/mixins";
+@import "../../../assets/css/spacing";
+@import "../../../assets/css/variables";
+
+.numberList{
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 5px;
+}
+.active{
+  background-color: #2569e6;
+  color: #fff;
+  border-radius: 2px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,101 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.HeroBanner {
+  z-index: 9;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  .HeroHeading {
+    max-width: 650px;
+    width: 100%;
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    z-index: 9;
+    @include small-mobiles(){
+      font-size: 32px;
+      line-height:36px;
+      
+    }
+    @include font-bold();
+    margin-bottom: 60px;
+    text-align: center;
+    .BlueSpan {
+      color: #2569e6;
+    }
+  }
+}
+.HeroOpening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 130px;
+}
+.SearchBar {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 4px;
+  z-index: 9;
+  max-width: 980px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 300px 1fr 180px;
+  grid-template-rows: 60px;
+  @include large-tablet() {
+    display: block;
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  height: calc(100vh - 275px);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 78px;
+  &::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.65);
+    top: 78px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    height: calc(100vh - 275px);
+  }
+  video {
+    width: 100%;
+    height: calc(100vh - 275px);
+    position: absolute;
+    top: 78px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.OpenRoleBtn {
+  background-color: #0d6efd;
+  @include nav-btn();
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 15px 32px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+  }
+}

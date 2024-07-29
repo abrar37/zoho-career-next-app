@@ -1,0 +1,111 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.Occupation {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: 80px;
+  @include small-mobiles() {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .Btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    @include small-mobiles() {
+      margin-top: 40px;
+     
+    }
+    Button {
+      padding: 12px 32px;
+      border: 1px solid #2569e6;
+      @include font-bold();
+      font-size: 14px;
+      line-height: 18px;
+      color: #fff;
+    }
+  }
+}
+.Occupationtop {
+  padding-top: 56px;
+  padding-bottom: 80px;
+}
+.SearchBar {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 4px;
+  z-index: 9;
+  // max-width: 1080px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 300px 1fr 180px;
+  grid-template-rows: 60px;
+  @include large-tablet() {
+    display: block;
+  }
+}
+
+.AlertBtn {
+  background-color: #f3f3f3;
+  color: #000000;
+  border: 0;
+  @include font-regular();
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.JobCls {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  p {
+    display: none !important;
+  }
+}
+
+.Vacancytext {
+  height: 40vh;
+  display: flex;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  @include font-bold();
+  color: #6c6c6c;
+}
+
+.ResultText {
+  font-size: 1rem;
+  color: #323232;
+  line-height: 2;
+  font-weight: 600;
+  margin: 5px 0 10px 1px;
+  @include font-bold();
+  span {
+    @include font-regular();
+    color: #6c6c6c;
+  }
+}
+.JobWrapper {
+  h1 {
+    @include font-bold();
+    font-size: 40px;
+    line-height: 56px;
+    color: #000;
+    margin-bottom: 16px;
+    @include mobile() {
+      font-size: 30px;
+    }
+  }
+  p {
+    @include font-regular();
+    font-size: 14px;
+    line-height: 21px;
+    color: #242424;
+    // max-width:727px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}

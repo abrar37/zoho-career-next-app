@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tkxel/recruit.tkxel.com/
+    - /bin/cp -R /home/tkxel/tkxel-marketing/master $DEPLOYPATH

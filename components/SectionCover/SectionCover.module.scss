@@ -1,0 +1,65 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.HeroSection {
+    color: $white;
+    .ctaBG {
+      background-image: url(../../public/images/student-amb-cover.png);
+      background-size: cover;
+      min-height: 580px;
+      background-repeat: no-repeat;
+      padding: 170px 30px;
+      background-position: right;
+      @include small-mobiles() {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .ctaText {
+        max-width: 1080px;
+        margin:  0 auto;
+        h1 {
+            max-width: 550px;
+            width: 100%;
+            @include font-bold();
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 66px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          @include small-mobiles() {
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 0;
+          }
+        }
+        p {
+            max-width: 440px;
+            width: 100%;
+          @include font-regular();
+          font-size: 24px;
+          line-height: 29px;
+          margin-bottom: 40px;
+          @include small-mobiles() {
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 20px;
+          }
+        }
+        .applyBtn {
+            border-radius: 2px;
+            @include font-regular();
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 15px 24px;
+            @include small-mobiles() {
+              padding: 8px 12px;
+              font-size: 12px;
+              line-height: 24px;
+            }
+        }
+      }
+    }
+  }
+  

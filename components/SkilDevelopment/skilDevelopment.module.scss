@@ -1,0 +1,62 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.skillsWrapper {
+  padding-top: 80px;
+  @include small-mobiles() {
+    padding-top: 60px;
+   
+  }
+}
+.SkillContent {
+  h1 {
+    @include font-bold();
+    font-size: 40px;
+    line-height: 46px;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+  p {
+    @include font-regular();
+    font-size: 14px;
+    line-height: 21px;
+    color: #6c6c6c;
+    margin: 0;
+  }
+}
+
+.devContent {
+  padding-bottom: 40px;
+  @include tablet-and-mobile() {
+    padding-bottom: 60px;
+  }
+  @include tablet-desktop() {
+    padding-bottom: 80px;
+    padding-right: 80px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #242424;
+    margin-bottom: 60px;
+  }
+  ul {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    li {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      color: #000000;
+      padding: 24px 3px;
+    }
+  }
+}

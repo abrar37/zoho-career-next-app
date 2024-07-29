@@ -1,0 +1,35 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+.ctaJobsWrapper {
+  color: $white;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  .ctaBG {
+    background-color: #000;
+    padding: 80px 0;
+    .ctaText {
+      max-width: 575px;
+      margin:  0 auto;
+      h2 {
+        font-size: 40px;
+        line-height: 46px;
+        margin-bottom: 30px;
+        @include small-mobiles() {
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        color: #8a92a3;
+        padding: 40px 0;
+      }
+      .applyBtn {
+        padding: 18px 48px;
+      }
+    }
+  }
+}

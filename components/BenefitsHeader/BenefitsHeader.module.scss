@@ -1,0 +1,83 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+
+
+.navbar {
+  background-color: red;
+  margin: 0 auto;
+ 
+}
+
+
+.CareerNav {
+  position: fixed !important;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.09);
+  padding: 20px 0 !important;
+  margin-top:120px;
+  max-width: 1030px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  @include tab-and-mobile() {
+    display:none;
+   }
+ 
+  .header {
+    display: flex;
+    align-items: center;
+    .authLinks {
+      display: flex;
+      @include flexbox();
+      @include align-items(center);
+      gap: 5px;
+      margin-right: 5px;
+      margin-right: 32px;
+      text-transform: uppercase;
+      @include font-medium();
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  :global {
+    .nav-link {
+      padding-right: 40px !important;
+      @include nav-light();
+    }
+  }
+  
+  .active {
+    a {
+      @include nav-light();
+      color:#2569E6 !important;
+      
+    }
+  }
+}
+.DropSubMenu{
+
+@include tablet-desktop() {
+    display: none;
+}
+    @include tab-and-mobile() {
+        width: 100%;
+        z-index: 10;
+        padding-top: 130px;
+        max-width: 1030px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        position: fixed;
+        text-align: center;
+      }
+   
+}
+
+
+
+
+
+
+

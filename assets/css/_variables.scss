@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+// COLORS
+/* Put in your brand colors here */
+$white: #ffffff;
+$black: #000000;
+$blue: #2569e6;
+$dark-gray: #242424;
+$gray: #8a92a3;
+$bg-dark: #07011e;
+$white-opacity: rgba(255, 255, 255, 0.5);
+$border-color: #eaeced;
+$light-black: #040404;
+$theme-black:  #14212D;
+
+// MEDIA QUERIES
+$phone-vertical: "screen and (max-width: 420px)";
+$phone: "screen and (max-width: 640px)";
+$tablet-and-lower: "screen and (max-width: 768px)";
+$tablet: "screen and (min-width: 641px) and (max-width: 1007px)";
+$tablet-and-up: "screen and (min-width: 641px)";
+$pocket: "screen and (max-width: 1007px)";
+$lap-small: "screen and (max-width: 1080px) and (min-width: 768px)";
+$lap: "screen and (min-width: 1008px) and (max-width: 1239px)";
+$lap-and-up: "screen and (min-width: 1008px)";
+$desk: "screen and (min-width: 1240px)";
+$desk-and-down: "screen and (max-width: 1270px)";
+$widescreen: "screen and (min-width: 1500px)";
+$custom-nav: "screen and (max-width: 970px)";
+
+//FONTS
+
+$font-family: "DM Sans", sans-serif;
+$bold-weight: 700;
+$medium-weight: 600;
+$regular-weight: 400;
+$counter-font-family: "Roboto", sans-serif;
+$count-weight: 700;
+$nav-font-family: "Lato", sans-serif;
+$nav-bold-weight: 700;
+$nav-light-weight: 400;
+$nav-font-size: 14px;
+$nav-line-height: 17px;
+
+//MIXINS FOR FONTS
+// DM SANS
+@mixin font-bold() {
+  font-family: $nav-font-family;
+  font-weight: $bold-weight;
+}
+@mixin font-medium() {
+  font-family: $nav-font-family;
+  font-weight: $medium-weight;
+}
+@mixin font-regular() {
+  font-family: $nav-font-family;
+  font-weight: $regular-weight;
+}
+//ROBOTO
+@mixin counter-font() {
+  font-family: $counter-font-family;
+  font-weight: $count-weight;
+}
+//LATO
+@mixin nav-bold() {
+  font-family: $nav-font-family;
+  font-weight: $nav-bold-weight;
+  color: $black !important;
+  font-size: $nav-font-size;
+  line-height: $nav-line-height;
+}
+@mixin nav-btn() {
+  font-family: $nav-font-family;
+  font-weight: $medium-weight;
+  color: $white !important;
+  font-size: $nav-font-size;
+  line-height: $nav-line-height;
+}
+@mixin nav-light() {
+  font-family: $nav-font-family;
+  font-weight: $nav-light-weight;
+  color: $theme-black !important;
+  font-size: $nav-font-size;
+  line-height: $nav-line-height;
+}

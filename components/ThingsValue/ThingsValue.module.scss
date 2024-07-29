@@ -1,0 +1,98 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.para {
+  text-align: center;
+  max-width: 100% !important;
+}
+.PerksWrapper {
+  padding: 110px 0;
+  background: #141414;
+  margin-top: 110px;
+  .TopThings {
+    .titleSec {
+      max-width: 850px;
+      width: 100%;
+      h1 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 47px;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #a6a7af;
+        margin-bottom: 40px;
+      }
+    }
+    .ThingsValues {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #a6a7af;
+      margin-bottom: 100px;
+      h6{
+        @include font-regular();
+        color: #fff;
+        padding:0 20px;
+      }
+      .headside{
+        @include font-regular();
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        margin-bottom: 16px;
+        padding:0 30px;
+        }
+      // .cardsclass {
+      //   h6{
+         
+      //       color:#fff
+    
+      //   }
+      // }
+     
+      .ThingsCard {
+        text-align: center;
+        padding: 40px 60px;
+        border-right: 1px solid #a6a7af;
+        p{
+          color: #A6A7AF;
+        }
+        &:last-child {
+          border-right: none;
+          @include mobile() {
+            border-bottom: none;
+          }
+        }
+        &:nth-child(2) {
+          @include tab-and-mobile() {
+            border-right: 1px;
+          }
+        }
+        @include mobile() {
+          &:nth-child(2n + 1) {
+            border-right: 0;
+          }
+        }
+        @include tab-and-mobile() {
+          border-bottom: 1px solid #a6a7af;
+        }
+      }
+      @include tablet-and-lower() {
+        .ThingsCard:nth-child(5),
+        .ThingsCard:nth-child(6),
+        .ThingsCard:nth-child(7),
+        .ThingsCard:nth-child(8) {
+          border-top: 1px solid #a6a7af;
+        }
+      }
+    }
+    .para {
+      margin-right: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.AmbCardWrapper{
+    background-color:#0755E9;
+    padding: 100px 30px;
+    margin: 0 auto;
+    @include small-mobiles() {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+h2{
+    max-width: 450px;
+    width: 100%;
+    color: #fff;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    .top{
+        margin-bottom: 100px;
+        @include small-mobiles() {
+           margin-bottom: 20px;
+          }
+    }
+    .cardbox{
+        border: 1px solid #fff;
+        padding: 30px;
+    }
+    
+    .number{
+        margin-bottom: 54px;
+        color: #fff;
+        @include small-mobiles() {
+           margin-bottom: 30px;
+          }
+       }
+       .icon {
+        margin-bottom: 54px;
+        max-height: 60px;
+        @include small-mobiles() {
+            margin-bottom: 30px;
+          }
+
+       }
+       .content{
+        max-width: 300px;
+        width: 100%;
+        color: #fff;
+        p{
+            @include font-regular();
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 40px;
+            @include small-mobiles() {
+              font-size: 14px;
+              line-height: 21px;
+              margin-bottom: 0;
+            }
+        }
+       }
+    @include card-tablet(){
+        .cardbox:nth-child(2){
+            border-top:1px solid #fff !important;
+            border-bottom: 1px solid #fff !important;
+        }
+        .cardbox:nth-child(2){
+            border-left: 0;
+        }
+        .cardbox:nth-child(4){
+            border-left: 0;
+            border-top: 0;
+        }
+        .cardbox:nth-child(3){
+            border-top: 0;
+        }
+    }
+    @include small-mobiles(){
+        .cardbox:nth-child(2){
+            border-left: 1px solid #fff !important;
+        }
+    }
+    @include tab-and-mobile() {
+        .cardbox:nth-child(2){
+            border-right: 1px solid #fff !important;
+            border-top: none;
+            border-bottom: none;
+            }
+            .cardbox:nth-child(5){
+                border-left: 1px solid #fff !important;
+                border-top: none;
+            }
+            .cardbox:nth-child(4){
+                border-top: 0;
+            }
+      }
+      @include tablet-desktop() {
+        .cardbox:nth-child(2){
+            border-left: none;
+            
+        }
+
+        .cardbox:nth-child(3){
+            border-left: none;
+            
+        }
+        .cardbox:nth-child(5){
+            border-left: none;
+            border-top: none;
+        }
+        .cardbox:nth-child(4){
+            border-top: none;
+        }
+      }
+    
+    
+}
+
+
+}

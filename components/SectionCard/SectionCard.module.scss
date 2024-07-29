@@ -1,0 +1,46 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.CardHead {
+  @include font-medium();
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 16px;
+  padding:0 42px;
+}
+.style_p{
+  padding: 0;
+}
+.CardPara {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 21px;
+  color: #6c6c6c;
+  margin: 0;
+  padding:0 42px;
+}
+.CardImg {
+  margin-bottom: 42px;
+  display: block;
+}
+.CardImgMb {
+  margin-bottom: 0;
+  display: block;
+}
+.CardHeadMb {
+  @include font-regular();
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 0px;
+  padding: 40px 0;
+  text-align: center;
+  @include mobile() {
+    margin-bottom: 30px;
+  }
+}
+.border-show-card {
+  border-top: 1px solid #000;
+}

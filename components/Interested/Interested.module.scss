@@ -1,0 +1,50 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.comsWrapper{
+    padding: 100px 30px;
+    @include small-mobiles() {
+        padding:60px 30px;
+      }
+h2{
+    margin-bottom: 14px;
+    @include font-bold();
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    @include small-mobiles() {
+        font-size: 24px;
+        line-height: 36px;
+      }
+}
+p{
+    max-width: 560px;
+    width: 100%;
+    margin-bottom: 78px;
+    @include font-regular();
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1B1B1B;
+    @include small-mobiles() {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 20px;
+      }    
+}
+.applyBtn {
+    border-radius: 2px;
+    @include font-regular();
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 24px;
+    margin-bottom: 30px;
+    @include small-mobiles() {
+        padding: 8px 12px;
+        font-size: 12px;
+        line-height: 24px;
+      }
+}
+}

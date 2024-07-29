@@ -1,0 +1,58 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.videoWrapper {
+  position: relative;
+  .customThumbnail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    .playVideo {
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      .videoContentWrapper {
+        display: flex;
+        align-items: flex-start;
+        color: #fff;
+        h6 {
+          font-size: 1.25rem;
+          margin-bottom: 0.25rem;
+        }
+        p {
+          margin: 0;
+          @include small-mobiles() {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  video {
+    max-width: 1080px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .videoTitle {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    color: #fff;
+    display: flex;
+    button {
+      background: transparent;
+      border: 0;
+      position: relative;
+      margin-right: 10px;
+    }
+    .pauseBtn {
+      margin-bottom: 20px;
+      margin-left: -4px;
+    }
+  }
+}

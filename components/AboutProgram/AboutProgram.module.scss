@@ -1,0 +1,36 @@
+@import "../../assets/css/mixins";
+@import "../../assets/css/spacing";
+@import "../../assets/css/variables";
+
+.comsWrapper{
+    padding: 100px 30px;
+    @include small-mobiles() {
+        padding:60px 30px;
+      }
+h2{
+    margin-bottom: 68px;
+    @include font-bold();
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    @include small-mobiles() {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 20px;
+      }
+}
+p{
+    max-width: 560px;
+    width: 100%;
+    @include font-regular();
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1B1B1B;
+    @include small-mobiles() {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 30px;
+      }
+}
+}
